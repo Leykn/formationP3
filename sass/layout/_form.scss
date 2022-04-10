@@ -1,0 +1,212 @@
+.form_search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &-town {
+        display: flex;
+        justify-content: center;
+        background-color: #e2e2e2;
+        width: 100%;
+        padding: 15px;
+        font-weight: 900;
+        box-shadow: inset 0 2px 2px rgba($color: #000000, $alpha: .1);
+
+        & p {
+            font-weight: 700;
+            position: relative;
+            &::before {
+                font: var(--fa-font-solid);
+                content: "\f3c5";
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                transform: translateX(-30px);
+            }
+        }
+
+        & i {
+            margin: 0 20px;
+        }
+    }
+    &-boxSearch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 40px;
+        background-color: #f2f2f2;
+        &--title {
+            font-size: 26px;
+            font-weight: 900;
+            margin: 10px 0;
+        }
+        & p {
+            margin: 10px 0;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+    &-explorer {
+        width: fit-content;
+        margin: 20px;
+        padding: 15px;
+        font-weight: 600;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        background: rgb(147,86,220);
+        background: linear-gradient(325deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        box-shadow: 2px 2px 10px rgba($color: #000000, $alpha: .3);
+        cursor: pointer;
+        &:hover {
+        background: rgb(255,121,218);
+        background: linear-gradient(145deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        box-shadow: inset 2px 2px 10px rgba($color: #000000, $alpha: .1);
+        }
+    }
+}
+
+.form_functioning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 20px;
+    @include desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    & h3 {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 26px;
+        font-weight: 900;
+        @include tab-only {
+            text-align: center;
+        }
+        @include desktop {
+            text-align: center;
+        }
+    }
+    &-btn {
+        @include functioning_box;
+        position: relative;
+        @include tab-only {
+            width: 66%;
+        }
+        @include desktop {
+            width: 31%;
+        }
+
+        &:hover {
+            background-color: lighten($color: #f2f2f2, $amount: 1%);
+            box-shadow: 2px 3px 10px rgba($color: #000000, $alpha: .3);
+        }
+
+        & i:hover {
+            color: $color-primary;
+        }
+
+        & i {
+            margin: 0 0 0 10px;
+            color: rgba($color: #000000, $alpha: .5);
+            display: block;
+            position: absolute;
+            left: 0;
+        }
+
+        & p {
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+.form_restaurant {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    background-color: #f2f2f2;
+    @include desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    & h3 {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 26px;
+        font-weight: 900;
+        @include tab-only {
+            text-align: center;
+        }
+        @include desktop {
+            text-align: center;
+        }
+    }
+    &-card {
+        margin: 0 auto 20px auto;
+        width: 450px;
+        height: 300px;
+        border-radius: 20px;
+        background-color: white;
+        overflow: hidden;
+        box-shadow: 2px 2px 10px rgba($color: #000000, $alpha: .2);
+        line-height: 30px;
+        position: relative;
+        transition: .3s;
+        @include small-card {
+            width: 300px;
+            height: 200px;
+            line-height: 18px;
+        }
+        &:hover {
+            transform: scale(1.1);
+            transition: .3s;
+        }
+        & img {
+            width: 100%;
+            height: 75%;
+            object-fit: cover;
+        }
+    }
+    &-title {
+        padding: 0 15px;
+        font-weight: 700;
+        @include small-card {
+            margin-bottom: 5px;
+        }
+    }
+    &-district {
+        padding: 0 15px;
+    }
+}
+
+.form_new {
+    width: fit-content;
+    background-color: $color-third;
+    color: darken($color: $color-third, $amount: 35%);
+    border-radius: 2px;
+    box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: .2);
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    transition: .3s;
+    @include small-card {
+        left: 65%;
+    }
+    & p {
+        padding: 2px 10px;
+    }
+    &:hover {
+        color: lighten($color: $color-third, $amount: 10%);
+        transition: .3s;
+    }
+}

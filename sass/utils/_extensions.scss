@@ -1,0 +1,15 @@
+%position_img {
+    object-position: 50% 100%;
+}
+
+.position_img-pale {
+    @extend %position_img;
+}
+
+.position_img-fran {
+    @extend %position_img;
+}
+
+.position_img-sens {
+    @extend %position_img;
+}

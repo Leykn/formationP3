@@ -12,3 +12,15 @@ a {
     text-decoration: none;
     color: black;
 }
+
+.border_title {
+    width: 10%;
+    height: 3px;
+    background-color: $color-third;
+    margin-top: 5px;
+}
+
+span.price {
+    margin: 0 15px;
+    font-weight: 700;
+}

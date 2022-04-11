@@ -7,3 +7,55 @@ header {
         margin: 15px;
     }
 }
+
+span.arrow {
+    position: absolute;
+    left: 15px;
+}
+// Création de la fléche de retour à l'acceuil
+// Creation of the arrow back to home
+[class*="icono"] {
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    &:after, &:before {
+      content: "";
+    }
+    &:hover {
+        color: #555;
+    }
+}
+[class*="icono-arrow1"]{
+    width: 15px;
+    height: 15px;
+    border-width: 3px 3px 0 0;
+    border-style: solid;
+    margin: 10px;
+    @include tab-only {
+        width: 20px;
+        height: 20px;
+    }
+    @include desktop {
+        width: 25px;
+        height: 25px;
+    }
+    &:before{
+        right: 0;
+        top: -2px;
+        position: absolute;
+        height: 3px;
+        box-shadow: inset 0 0 0 10px;
+        transform: rotate(-45deg);
+        width: 18px;
+        transform-origin: right top;
+        @include tab-only {
+            width: 23px;
+        }
+        @include desktop {
+            width: 28px;
+        }
+    }
+    &[class*="-right"]{
+        transform: rotate(-135deg);
+    }
+}

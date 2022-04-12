@@ -1,14 +1,43 @@
 .contained {
     width: 100%;
     background-color: #f2f2f2;
-    border-radius: 50px;
+    border-radius: 50px 50px 0 0;
     padding: 8% 5%;
     position: relative;
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 0;
+    }
+    @include tab-only {
+        border-radius: 0;
+    }
+    &_starter {
+        @include desktop {
+            margin: 0 auto;
+            width: 30%;
+        }
+    }
+    &_main {
+        @include desktop {
+            margin: 0 auto;
+            width: 30%;
+        }
+    }
+    &_dessert {
+        @include desktop {
+            margin: 0 auto;
+            width: 30%;
+        }
+    }
     &_title {
         display: flex;
         justify-content: space-between;
         font-family: 'Shrikhand', cursive;
         font-size: 20px;
+        @include desktop {
+            width: 100%;
+        }
     }
     &_box {
         padding: 10px 15px;

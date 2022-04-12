@@ -18,6 +18,9 @@ a {
     height: 3px;
     background-color: $color-third;
     margin-top: 5px;
+    @include tab-only {
+        width: 5%;
+    }
 }
 
 span.price {

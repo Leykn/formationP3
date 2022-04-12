@@ -23,6 +23,11 @@ a {
   background-color: #99E2D0;
   margin-top: 5px;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .border_title {
+    width: 5%;
+  }
+}
 
 span.price {
   margin: 0 15px;
@@ -37,6 +42,18 @@ footer h3 {
   font-family: "Shrikhand", cursive;
   font-weight: 500;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  footer h3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  footer h3 {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .btn_before-1::before {
@@ -136,23 +153,33 @@ footer h3 {
   top: 0;
   z-index: 1;
 }
+@media screen and (max-width: 350px) {
+  .btn_functioning {
+    padding-left: 10px;
+  }
+}
 
 .btn {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .btn_menu {
-  width: 50%;
+  width: 33%;
   margin: 20px;
   padding: 20px;
   font-weight: 600;
   color: white;
   border: none;
   border-radius: 30px;
-  background: rgb(147, 86, 220);
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+}
+@media screen and (max-width: 490px) {
+  .btn_menu {
+    width: fit-content;
+  }
 }
 .btn_menu:hover {
   background: rgb(255, 121, 218);
@@ -287,7 +314,6 @@ span.arrow {
   color: white;
   border: none;
   border-radius: 30px;
-  background: rgb(147, 86, 220);
   background: linear-gradient(325deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -467,15 +493,50 @@ span.arrow {
 .contained {
   width: 100%;
   background-color: #f2f2f2;
-  border-radius: 50px;
+  border-radius: 50px 50px 0 0;
   padding: 8% 5%;
   position: relative;
+}
+@media screen and (min-width: 992px) {
+  .contained {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .contained {
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contained_starter {
+    margin: 0 auto;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contained_main {
+    margin: 0 auto;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contained_dessert {
+    margin: 0 auto;
+    width: 30%;
+  }
 }
 .contained_title {
   display: flex;
   justify-content: space-between;
   font-family: "Shrikhand", cursive;
   font-size: 20px;
+}
+@media screen and (min-width: 992px) {
+  .contained_title {
+    width: 100%;
+  }
 }
 .contained_box {
   padding: 10px 15px;
@@ -508,7 +569,12 @@ span.arrow {
 }
 
 .canva {
-  height: 280px;
+  height: 66vw;
+}
+@media screen and (min-width: 992px) {
+  .canva {
+    overflow: hidden;
+  }
 }
 .canva img {
   width: 100%;
@@ -523,6 +589,19 @@ footer {
 footer ul {
   list-style-type: none;
   line-height: 30px;
+}
+@media screen and (min-width: 992px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 footer a {
   color: white;

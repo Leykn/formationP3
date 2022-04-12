@@ -6,4 +6,12 @@ footer h3 {
     font-family: 'Shrikhand', cursive;
     font-weight: 500;
     margin-bottom: 20px;
+    @include desktop {
+        width: 100%;
+        text-align: center;
+    }
+    @include tab-only {
+        width: 100%;
+        text-align: center;
+    }
  }

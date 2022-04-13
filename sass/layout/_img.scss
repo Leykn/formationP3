@@ -3,9 +3,12 @@
 }
 
 .canva {
-    height: 66vw;
+    height: 55vw;
     @include desktop {
         overflow: hidden;
+    }
+    @include small-card {
+        height: 53vw;
     }
     & img {
         width: 100%;

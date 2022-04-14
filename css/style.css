@@ -215,9 +215,10 @@ footer h3 {
   }
 }
 .btn_menu:hover {
-  background: rgb(255, 121, 218);
   background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.btn_menu:active {
+  box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -352,9 +353,10 @@ span.arrow {
   cursor: pointer;
 }
 .form_search-explorer:hover {
-  background: rgb(255, 121, 218);
   background: linear-gradient(145deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.form_search-explorer:active {
+  box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.2);
 }
 
 .form_functioning {
@@ -586,16 +588,18 @@ span.arrow {
   position: relative;
   transition: 0.5s;
 }
-.contained_box:after {
+.contained_box-1 {
+  margin-right: 0;
+  transition: all 0.5s;
+}
+.contained_box-2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font: var(--fa-font-solid);
-  content: "\f058";
   color: white;
   font-size: 22px;
   transform: translateX(100%);
-  width: 15%;
+  width: 20%;
   height: 100%;
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
@@ -604,17 +608,21 @@ span.arrow {
   right: 0;
   transition: all 0.5s;
 }
-.contained_box:hover::after {
+.contained_box i {
+  transform: rotate(0deg);
+  transition: all 1s;
+}
+.contained_box:hover .contained_box-2 {
   transform: translateX(0);
   transition: all 0.5s;
 }
-.contained_box p {
-  margin-right: 0;
+.contained_box:hover .contained_box-1 {
+  margin-right: 18%;
   transition: all 0.5s;
 }
-.contained_box:hover p {
-  margin-right: 15%;
-  transition: all 0.5s;
+.contained_box:hover i {
+  transform: rotate(720deg);
+  transition: all 1s;
 }
 .contained_box-title {
   font-weight: 700;

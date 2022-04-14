@@ -12,12 +12,53 @@
     opacity: 1;
   }
 }
-@keyframes icon_spin {
+.animation_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: "Shrikhand", cursive;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.1, 0.8, 0.3, 1.2);
+}
+.animation_title p {
+  color: transparent;
+  font-size: 80px;
+  background: linear-gradient(45deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+@media screen and (min-width: 992px) {
+  .animation_title p {
+    font-size: 110px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .animation_title p {
+    font-size: 55px;
+  }
+}
+
+@keyframes spin {
   from {
+    opacity: 0;
     transform: rotate(0deg);
+    visibility: hidden;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: rotate(1080deg);
+    visibility: visible;
   }
 }
 * {
@@ -444,6 +485,11 @@ span.arrow {
     justify-content: space-around;
   }
 }
+@media screen and (max-width: 350px) {
+  .form_restaurant {
+    padding: 50px 10px;
+  }
+}
 .form_restaurant h3 {
   width: 100%;
   margin-bottom: 20px;
@@ -458,6 +504,11 @@ span.arrow {
 @media screen and (min-width: 992px) {
   .form_restaurant h3 {
     text-align: center;
+  }
+}
+@media screen and (max-width: 350px) {
+  .form_restaurant h3 {
+    margin-left: 10px;
   }
 }
 .form_restaurant-card {

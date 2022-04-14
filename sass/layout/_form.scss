@@ -139,6 +139,9 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    @include small-icon {
+        padding: 50px 10px;
+    }
     & h3 {
         width: 100%;
         margin-bottom: 20px;
@@ -149,6 +152,9 @@
         }
         @include desktop {
             text-align: center;
+        }
+        @include small-icon {
+            margin-left: 10px;
         }
     }
     &-card {

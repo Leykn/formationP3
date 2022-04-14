@@ -2,6 +2,65 @@
   object-position: 50% 100%;
 }
 
+@keyframes box_spawn {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animation_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: "Shrikhand", cursive;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.1, 0.8, 0.3, 1.2);
+}
+.animation_title p {
+  color: transparent;
+  font-size: 80px;
+  background: linear-gradient(45deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+@media screen and (min-width: 992px) {
+  .animation_title p {
+    font-size: 110px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .animation_title p {
+    font-size: 55px;
+  }
+}
+
+@keyframes spin {
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(1080deg);
+    visibility: visible;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +91,12 @@ a {
 span.price {
   margin: 0 15px;
   font-weight: 700;
+}
+
+span.description {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 html {
@@ -103,16 +168,16 @@ footer h3 {
 }
 
 .like {
+  cursor: pointer;
   width: 30px;
   height: 30px;
   font-size: 30px;
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   position: absolute;
   right: 5%;
   bottom: 8%;
-  transition: 1s;
 }
 .like:hover {
   background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
@@ -122,8 +187,10 @@ footer h3 {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0;
   -webkit-text-stroke-color: transparent;
+  transition: 1s;
 }
 .like_title {
+  cursor: pointer;
   width: 30px;
   height: 30px;
   margin-right: 30px;
@@ -131,7 +198,13 @@ footer h3 {
   -webkit-text-fill-color: #f2f2f2;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  transition: 1s;
+}
+@media screen and (max-width: 490px) {
+  .like_title {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+  }
 }
 .like_title:hover {
   background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
@@ -141,6 +214,7 @@ footer h3 {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0;
   -webkit-text-stroke-color: transparent;
+  transition: 1s;
 }
 
 .btn_functioning {
@@ -182,9 +256,10 @@ footer h3 {
   }
 }
 .btn_menu:hover {
-  background: rgb(255, 121, 218);
   background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.btn_menu:active {
+  box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -319,9 +394,10 @@ span.arrow {
   cursor: pointer;
 }
 .form_search-explorer:hover {
-  background: rgb(255, 121, 218);
   background: linear-gradient(145deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.form_search-explorer:active {
+  box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.2);
 }
 
 .form_functioning {
@@ -409,6 +485,11 @@ span.arrow {
     justify-content: space-around;
   }
 }
+@media screen and (max-width: 350px) {
+  .form_restaurant {
+    padding: 50px 10px;
+  }
+}
 .form_restaurant h3 {
   width: 100%;
   margin-bottom: 20px;
@@ -423,6 +504,11 @@ span.arrow {
 @media screen and (min-width: 992px) {
   .form_restaurant h3 {
     text-align: center;
+  }
+}
+@media screen and (max-width: 350px) {
+  .form_restaurant h3 {
+    margin-left: 10px;
   }
 }
 .form_restaurant-card {
@@ -493,7 +579,7 @@ span.arrow {
 .contained {
   width: 100%;
   background-color: #f2f2f2;
-  border-radius: 50px 50px 0 0;
+  border-radius: 40px 40px 0 0;
   padding: 8% 5%;
   position: relative;
 }
@@ -531,7 +617,7 @@ span.arrow {
   display: flex;
   justify-content: space-between;
   font-family: "Shrikhand", cursive;
-  font-size: 20px;
+  font-size: 18px;
 }
 @media screen and (min-width: 992px) {
   .contained_title {
@@ -539,20 +625,61 @@ span.arrow {
   }
 }
 .contained_box {
+  cursor: pointer;
+  overflow: hidden;
   padding: 10px 15px;
   margin: 15px 0;
   background-color: white;
   border-radius: 20px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   line-height: 25px;
+  animation-name: box_spawn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  position: relative;
+  transition: 0.5s;
 }
-.contained_box:hover::after {
-  content: "";
-  width: 100px;
+.contained_box-1 {
+  margin-right: 0;
+  transition: all 0.5s;
+}
+.contained_box-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  transform: translateX(100%);
+  width: 20%;
+  height: 100%;
   background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+}
+.contained_box i {
+  transform: rotate(0deg);
+  transition: all 1s;
+}
+.contained_box:hover .contained_box-2 {
+  transform: translateX(0);
+  transition: all 0.5s;
+}
+.contained_box:hover .contained_box-1 {
+  margin-right: 18%;
+  transition: all 0.5s;
+}
+.contained_box:hover i {
+  transform: rotate(720deg);
+  transition: all 1s;
 }
 .contained_box-title {
   font-weight: 700;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 .contained_box-description {
   display: flex;
@@ -569,11 +696,16 @@ span.arrow {
 }
 
 .canva {
-  height: 66vw;
+  height: 55vw;
 }
 @media screen and (min-width: 992px) {
   .canva {
     overflow: hidden;
+  }
+}
+@media screen and (max-width: 490px) {
+  .canva {
+    height: 53vw;
   }
 }
 .canva img {

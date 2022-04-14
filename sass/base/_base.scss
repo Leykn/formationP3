@@ -27,3 +27,9 @@ span.price {
     margin: 0 15px;
     font-weight: 700;
 }
+
+span.description {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}

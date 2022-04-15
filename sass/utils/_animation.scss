@@ -1,23 +1,12 @@
-@keyframes box_spawn {
-    from {
-        transform: translateY(50%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
+// home page animation
 .animation_title {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     font-family: 'Shrikhand', cursive;
-    position: absolute;
+    position: fixed;
     top: 50%;
-    left: 0;
     opacity: 0;
     visibility: hidden;
     animation-name: spin;
@@ -51,5 +40,17 @@
         opacity: 1;
         transform: rotate(1080deg);
         visibility: visible;
+    }
+}
+
+// spawn animation for dish boxes
+@keyframes box_spawn {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

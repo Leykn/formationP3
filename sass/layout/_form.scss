@@ -1,3 +1,4 @@
+// search section style
 .form_search {
     display: flex;
     align-items: center;
@@ -68,6 +69,7 @@
     }
 }
 
+// functionning section style
 .form_functioning {
     display: flex;
     flex-direction: column;
@@ -129,6 +131,7 @@
     }
 }
 
+// restaurant section style
 .form_restaurant {
     display: flex;
     flex-direction: column;
@@ -195,6 +198,7 @@
     }
 }
 
+// new box style
 .form_new {
     width: fit-content;
     background-color: $color-third;

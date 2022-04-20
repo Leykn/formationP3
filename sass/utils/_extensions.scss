@@ -1,3 +1,4 @@
+// index image repositioning extension
 %position_img {
     object-position: 50% 100%;
 }
@@ -10,7 +11,7 @@
     @extend %position_img;
 }
 
-// index image repositioning extension
+
 .position_img-sens {
     @extend %position_img;
 }

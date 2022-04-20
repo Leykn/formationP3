@@ -1,13 +1,3 @@
-@mixin functioning_box {
-    justify-content: center;
-    width: 100%;
-    margin: 10px 0;
-    padding: 30px;
-    background-color: #f2f2f2;
-    border-radius: 25px;
-    box-shadow: 2px 3px 10px rgba($color: #000000, $alpha: .2);
-}
-
 @mixin nav_btn-before {
     width: 30px;
     height: 30px;

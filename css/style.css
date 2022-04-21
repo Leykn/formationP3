@@ -105,15 +105,17 @@
 
 .animation_main {
   animation-name: box_spawn;
-  animation-delay: 0.5s;
   animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }
 
 .animation_dessert {
   animation-name: box_spawn;
-  animation-delay: 1s;
   animation-duration: 0.5s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }
 

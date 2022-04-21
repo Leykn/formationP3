@@ -13,24 +13,6 @@
     @include tab-only {
         border-radius: 0;
     }
-    &_starter {
-        @include desktop {
-            margin: 0 auto;
-            width: 30%;
-        }
-    }
-    &_main {
-        @include desktop {
-            margin: 0 auto;
-            width: 30%;
-        }
-    }
-    &_dessert {
-        @include desktop {
-            margin: 0 auto;
-            width: 30%;
-        }
-    }
     &_title {
         display: flex;
         justify-content: space-between;
@@ -49,9 +31,6 @@
         border-radius: 20px;
         box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: .1);
         line-height: 25px;
-        animation-name: box_spawn;
-        animation-duration: .5s;
-        animation-timing-function: ease-in-out;
         position: relative;
         transition: .5s;
         &-1 {
@@ -78,15 +57,15 @@
             transform: rotate(0deg);
             transition: all 1s;
         }
-        &:hover .contained_box-2 {
+        &:active .contained_box-2 {
             transform: translateX(0);
             transition: all .5s;
         }
-        &:hover .contained_box-1 {
+        &:active .contained_box-1 {
             margin-right: 18%;
             transition: all .5s;
         }
-        &:hover i {
+        &:active i {
             transform: rotate(720deg);
             transition: all 1s;
         }
@@ -106,4 +85,32 @@
         margin-top: 40px;
         font-weight: 400;
     }
+    &_starter, &_main, &_dessert {
+        @include desktop {
+            margin: 0 auto;
+            width: 30%;
+        }
+    }
+}
+
+// basic menu style
+.border_title {
+    width: 10%;
+    height: 3px;
+    background-color: $color-third;
+    margin-top: 5px;
+    @include tab-only {
+        width: 5%;
+    }
+}
+
+span.price {
+    margin: 0 15px;
+    font-weight: 700;
+}
+
+span.description {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }

@@ -21,6 +21,10 @@
         @include desktop {
             width: 100%;
         }
+        & h1 {
+            font-size: 26px;
+            margin: 0;
+        }
     }
     &_box {
         cursor: pointer;
@@ -81,8 +85,9 @@
             font-size: 16px;
         }
     }
-    & h3 {
+    & h2 {
         margin-top: 40px;
+        font-size: 22px;
         font-weight: 400;
     }
     &_starter, &_main, &_dessert {

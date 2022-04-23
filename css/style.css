@@ -263,11 +263,8 @@ header {
   justify-content: center;
 }
 header .form_logo {
-  width: 100%;
-}
-header h1 {
   width: 40%;
-  margin: 15px 0 5px 0;
+  margin: 15px 0;
 }
 
 span.arrow {
@@ -389,19 +386,19 @@ span.arrow {
     justify-content: space-around;
   }
 }
-.form_functioning h3 {
+.form_functioning h2 {
   width: 100%;
   margin-bottom: 20px;
   font-size: 26px;
   font-weight: 900;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .form_functioning h3 {
+  .form_functioning h2 {
     text-align: center;
   }
 }
 @media screen and (min-width: 992px) {
-  .form_functioning h3 {
+  .form_functioning h2 {
     text-align: center;
   }
 }
@@ -524,24 +521,24 @@ span.arrow {
     padding: 50px 10px;
   }
 }
-.form_restaurant h3 {
+.form_restaurant h2 {
   width: 100%;
   margin-bottom: 20px;
   font-size: 26px;
   font-weight: 900;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .form_restaurant h3 {
+  .form_restaurant h2 {
     text-align: center;
   }
 }
 @media screen and (min-width: 992px) {
-  .form_restaurant h3 {
+  .form_restaurant h2 {
     text-align: center;
   }
 }
 @media screen and (max-width: 350px) {
-  .form_restaurant h3 {
+  .form_restaurant h2 {
     margin-left: 10px;
   }
 }
@@ -643,6 +640,10 @@ span.arrow {
     width: 100%;
   }
 }
+.contained_title h1 {
+  font-size: 26px;
+  margin: 0;
+}
 .contained_box {
   cursor: pointer;
   overflow: hidden;
@@ -702,8 +703,9 @@ span.arrow {
   justify-content: space-between;
   font-size: 16px;
 }
-.contained h3 {
+.contained h2 {
   margin-top: 40px;
+  font-size: 22px;
   font-weight: 400;
 }
 @media screen and (min-width: 992px) {

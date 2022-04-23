@@ -57,7 +57,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    & h3 {
+    & h2 {
         width: 100%;
         margin-bottom: 20px;
         font-size: 26px;
@@ -153,7 +153,7 @@
     @include small-icon {
         padding: 50px 10px;
     }
-    & h3 {
+    & h2 {
         width: 100%;
         margin-bottom: 20px;
         font-size: 26px;

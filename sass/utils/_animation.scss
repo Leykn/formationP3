@@ -1,6 +1,5 @@
 // loading spin animation
-.ring
-{
+.ring {
   position:fixed;
   top:50%;
   left:50%;
@@ -22,8 +21,8 @@
   visibility: hidden;
   animation: visibility 3s linear;
 }
-.ring:before
-{
+
+.ring:before {
   content:'';
   position:absolute;
   top:-3px;
@@ -36,8 +35,8 @@
   border-radius:50%;
   animation:animateC 3s linear infinite;
 }
-.spin
-{
+
+.spin {
   display:block;
   position:absolute;
   top:calc(50% - 2px);
@@ -48,8 +47,8 @@
   transform-origin:left;
   animation:animate 3s linear infinite;
 }
-.spin:before
-{
+
+.spin:before {
   content:'';
   position:absolute;
   width:16px;
@@ -60,6 +59,7 @@
   right:-8px;
   box-shadow:0 0 20px #FF79DA;
 }
+
 @keyframes animateC
 {
   0%
@@ -71,6 +71,7 @@
     transform:rotate(360deg);
   }
 }
+
 @keyframes animate
 {
   0%

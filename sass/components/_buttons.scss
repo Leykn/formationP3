@@ -58,7 +58,7 @@
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     background: linear-gradient(90deg, #fff 0%, #fff 50%, transparent 50%, transparent 100%),
-    repeating-linear-gradient(180deg, $color-primary, $color-secondary);
+    linear-gradient(180deg, $color-primary, $color-secondary);
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -81,7 +81,7 @@
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: black;
         background: linear-gradient(90deg, #f2f2f2 0%, #f2f2f2 50%, transparent 50%, transparent 100%),
-        repeating-linear-gradient(180deg, $color-primary, $color-secondary);
+        linear-gradient(180deg, $color-primary, $color-secondary);
         background-size: 200%;
         background-clip: text;
         -webkit-background-clip: text;

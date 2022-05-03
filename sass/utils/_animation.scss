@@ -1,6 +1,6 @@
 // loading spin animation
 .ring {
-  position:fixed;
+  position: absolute;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
@@ -18,8 +18,6 @@
   text-transform:uppercase;
   text-shadow:0 0 10px #9356DC;
   box-shadow:0 0 40px rgba(0,0,0,.5);
-  visibility: hidden;
-  animation: visibility 3s linear;
 }
 
 .ring:before {
@@ -86,10 +84,10 @@
 
 @keyframes visibility {
   0% {
-    visibility: visible;
+    transform: translateY(0);
   }
   100% {
-    visibility: hidden;
+    transform: translateY(100%);
   }
 }
 

@@ -1,9 +1,9 @@
-.position_img-sens, .position_img-fran, .position_img-pale {
+.position_img-pale, .position_img-fran, .position_img-sens {
   object-position: 50% 100%;
 }
 
 .ring {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -21,12 +21,10 @@
   text-transform: uppercase;
   text-shadow: 0 0 10px #9356DC;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-  visibility: hidden;
-  animation: visibility 3s linear;
 }
 
 .ring:before {
-  content: "";
+  content: '';
   position: absolute;
   top: -3px;
   left: -3px;
@@ -52,7 +50,7 @@
 }
 
 .spin:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;
@@ -81,10 +79,10 @@
 }
 @keyframes visibility {
   0% {
-    visibility: visible;
+    transform: translateY(0);
   }
   100% {
-    visibility: hidden;
+    transform: translateY(100%);
   }
 }
 @keyframes box_spawn {
@@ -99,21 +97,21 @@
 }
 .animation_starter {
   animation-name: box_spawn;
-  animation-duration: 0.5s;
+  animation-duration: .5s;
   animation-timing-function: ease-in-out;
 }
 
 .animation_main {
   animation-name: box_spawn;
-  animation-duration: 0.5s;
-  animation-delay: 0.5s;
+  animation-duration: .5s;
+  animation-delay: .5s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }
 
 .animation_dessert {
   animation-name: box_spawn;
-  animation-duration: 0.5s;
+  animation-duration: .5s;
   animation-delay: 1s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
@@ -134,12 +132,25 @@ a {
   color: black;
 }
 
+.loadingSpinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  z-index: 99;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+  transform: translateY(100%);
+  animation: visibility 1s 2s both linear;
+}
+
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 footer h3 {
-  font-family: "Shrikhand", cursive;
+  font-family: 'Shrikhand', cursive;
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -272,19 +283,19 @@ span.arrow {
   left: 15px;
 }
 
-[class*=icono] {
+[class*="icono"] {
   display: inline-block;
   vertical-align: middle;
   color: black;
 }
-[class*=icono]:after, [class*=icono]:before {
+[class*="icono"]:after, [class*="icono"]:before {
   content: "";
 }
-[class*=icono]:hover {
+[class*="icono"]:hover {
   color: #555;
 }
 
-[class*=icono-arrow1] {
+[class*="icono-arrow1"] {
   width: 15px;
   height: 15px;
   border-width: 3px 3px 0 0;
@@ -292,18 +303,18 @@ span.arrow {
   margin: 10px;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  [class*=icono-arrow1] {
+  [class*="icono-arrow1"] {
     width: 20px;
     height: 20px;
   }
 }
 @media screen and (min-width: 992px) {
-  [class*=icono-arrow1] {
+  [class*="icono-arrow1"] {
     width: 25px;
     height: 25px;
   }
 }
-[class*=icono-arrow1]:before {
+[class*="icono-arrow1"]:before {
   right: 0;
   top: -2px;
   position: absolute;
@@ -314,16 +325,16 @@ span.arrow {
   transform-origin: right top;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  [class*=icono-arrow1]:before {
+  [class*="icono-arrow1"]:before {
     width: 23px;
   }
 }
 @media screen and (min-width: 992px) {
-  [class*=icono-arrow1]:before {
+  [class*="icono-arrow1"]:before {
     width: 28px;
   }
 }
-[class*=icono-arrow1][class*=-right] {
+[class*="icono-arrow1"][class*="-right"] {
   transform: rotate(-135deg);
 }
 
@@ -442,7 +453,7 @@ span.arrow {
 }
 
 .btn_before-1::before {
-  content: "1";
+  content: '1';
   width: 30px;
   height: 30px;
   display: flex;
@@ -457,7 +468,7 @@ span.arrow {
   top: -5px;
 }
 .btn_before-2::before {
-  content: "2";
+  content: '2';
   width: 30px;
   height: 30px;
   display: flex;
@@ -472,7 +483,7 @@ span.arrow {
   top: -5px;
 }
 .btn_before-3::before {
-  content: "3";
+  content: '3';
   width: 30px;
   height: 30px;
   display: flex;
@@ -552,7 +563,7 @@ span.arrow {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   line-height: 30px;
   position: relative;
-  transition: 0.3s;
+  transition: .3s;
 }
 @media screen and (max-width: 490px) {
   .form_restaurant-card {
@@ -564,7 +575,7 @@ span.arrow {
 @media screen and (min-width: 992px) {
   .form_restaurant-card:hover {
     transform: scale(1.1);
-    transition: 0.3s;
+    transition: .3s;
   }
 }
 .form_restaurant-card img {
@@ -595,7 +606,7 @@ span.arrow {
   position: absolute;
   top: 5%;
   left: 75%;
-  transition: 0.3s;
+  transition: .3s;
 }
 @media screen and (max-width: 490px) {
   .form_new {
@@ -607,7 +618,7 @@ span.arrow {
 }
 .form_new:hover {
   color: #c1ede2;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .contained {
@@ -632,7 +643,7 @@ span.arrow {
 .contained_title {
   display: flex;
   justify-content: space-between;
-  font-family: "Shrikhand", cursive;
+  font-family: 'Shrikhand', cursive;
   font-size: 18px;
 }
 @media screen and (min-width: 992px) {
@@ -654,11 +665,11 @@ span.arrow {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   line-height: 25px;
   position: relative;
-  transition: 0.5s;
+  transition: .5s;
 }
 .contained_box-1 {
   margin-right: 0;
-  transition: all 0.5s;
+  transition: all .5s;
 }
 .contained_box-2 {
   display: flex;
@@ -674,7 +685,7 @@ span.arrow {
   position: absolute;
   top: 0;
   right: 0;
-  transition: all 0.5s;
+  transition: all .5s;
 }
 .contained_box i {
   transform: rotate(0deg);
@@ -682,11 +693,11 @@ span.arrow {
 }
 .contained_box:active .contained_box-2 {
   transform: translateX(0);
-  transition: all 0.5s;
+  transition: all .5s;
 }
 .contained_box:active .contained_box-1 {
   margin-right: 18%;
-  transition: all 0.5s;
+  transition: all .5s;
 }
 .contained_box:active i {
   transform: rotate(720deg);
@@ -787,7 +798,7 @@ footer a {
   position: relative;
 }
 footer a::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 1px;
@@ -797,11 +808,11 @@ footer a::before {
   bottom: -4px;
   left: 0;
   transform: scaleX(0);
-  transition: 0.5s;
+  transition: .5s;
 }
 footer a:hover::before {
   transform: scaleX(1);
-  transition: 0.5s;
+  transition: .5s;
 }
 footer i {
   width: 30px;

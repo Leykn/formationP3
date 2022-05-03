@@ -13,6 +13,17 @@ a {
     color: black;
 }
 
+article {
+    position: relative;
+    margin: 0 auto;
+    &:hover {
+        @include desktop {
+            transform: scale(1.1);
+            transition: .3s;
+        }
+    }
+}
+
 .loadingSpinner {
     position: fixed;
     top: 0;

@@ -62,9 +62,6 @@
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
-    position: absolute;
-    right: 5%;
-    bottom: 8%;
     transition: all 1s ease-in-out;
     &:active {
         background-position: right;
